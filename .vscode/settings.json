@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "iostream": "cpp"
+    },
+    "workbench.colorTheme": "Atom One Light",
+    "git.ignoreLimitWarning": true,
+    "window.zoomLevel": 0.01,
+    "workbench.colorCustomizations": {
+    "[Atom One Light]": {
+        "editor.background": "#C7EDCC",
+        "sideBar.background": "#C7EDCC",
+        "activityBar.background": "#C7EDCC",
+        }
+    }
+}

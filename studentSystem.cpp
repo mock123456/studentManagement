@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-
+#include "odd.h"
 struct Student
 {
     std::string id;
@@ -39,7 +39,12 @@ class StudentSystem{
             std::sort(students.begin(),students.end(),[](const Student &a,const Student &b){
                 return a.total > b.total;
             }); //lambda表达式
-        };       
+        };
+        void judgeOdd() {
+            printf("请输入一个整数:");
+            std::cin >> n;
+            std::cout << "是否是奇数: " << isOdd(n) << std::endl;
+        };
 
 };
 
@@ -51,9 +56,12 @@ int main(){
         std::cout << "请选择操作: " << std::endl;
         std::cout << "1. 添加学生" << std::endl;
         std::cout << "2. 排序学生" << std::endl;
+        std::cout << "3. 判断是否是奇数" << std::endl;
         std::cout << "0. 退出" << std::endl;
         std::cin >> choice;
         switch(choice){
+            case 0:
+                break;
             case 1:
                 system.addStudent();
                 break;
@@ -61,7 +69,7 @@ int main(){
                 system.sortStudents();
                 break;
             case 3:
-                break;
+                system.judgeOdd();
             default:
                 std::cout << "无效的选择,请重新输入" << std::endl;
         }
